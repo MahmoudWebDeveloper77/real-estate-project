@@ -1,0 +1,112 @@
+.v-container .image-container {
+  border: 8px solid rgb(232 232 232 / 93%);
+  margin-left: 50px;
+}
+
+.v-container > div {
+  flex: 1;
+}
+
+.v-right {
+  gap: 0.5rem;
+}
+
+.accordion {
+  margin-top: 2rem;
+  border: none;
+}
+
+.accordion-item {
+  background-color: white;
+  border: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.accordion-button {
+  padding: 1rem;
+  background-color: white;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon {
+  padding: 10px;
+  border-radius: 5px;
+  background: #eeeeff;
+}
+
+.item-heading {
+  font-size: 1.1rem;
+}
+
+.icon svg {
+  fill: var(--blue);
+}
+.accordion-item.expended {
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .accordion-item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .v-container {
+    flex-direction: column;
+  }
+  .v-container .image-container {
+    margin: 0;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .v-container .image-container {
+    width: 20rem;
+    height: 20rem;
+    margin: 0;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+
+  .item-heading {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .item-heading {
+    font-size: 0.8rem;
+  }
+  .v-container .image-container {
+    margin: 0;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .accordion-item {
+    width: 100%;
+    height: auto;
+  }
+  .accordion-button {
+    width: 100%;
+    padding: 12px;
+  }
+  .v-container .image-container {
+    width: 14rem;
+    height: 15rem;
+  }
+}

@@ -1,0 +1,118 @@
+.c-container > div {
+  flex: 1;
+}
+
+.c-right {
+  width: 100%;
+  margin-right: 70px;
+}
+
+.c-right .image-container {
+  width: 25rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.c-right .image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-left {
+  gap: 0.5rem;
+  margin-left: 50px;
+}
+
+.contactModes {
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.contactModes .row {
+  gap: 1.5rem;
+  flex-direction: row;
+}
+
+.mode {
+  width: 16rem;
+  padding: 1rem;
+  border: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-radius: 5px;
+  gap: 1rem;
+  transition: all 300ms ease-in;
+}
+
+.mode .button {
+  width: 100%;
+  background: var(--lightBlue);
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mode > :nth-child(1) {
+  width: 100%;
+  gap: 1.6rem;
+}
+
+.mode .detail .primaryText {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.number {
+  margin-top: 4px;
+}
+
+.mode:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.mode .button:hover {
+  background: var(--blue-gradient);
+  color: white;
+  scale: 0.8;
+}
+
+@media (max-width: 768px) {
+  .c-container {
+    flex-direction: column;
+  }
+  .c-right {
+    justify-content: center;
+  }
+
+  .c-left {
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .contactModes .row {
+    flex-direction: column;
+  }
+
+  .c-left {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .c-right {
+    margin: 0;
+  }
+  .mode {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-left,
+  .c-right {
+    margin: 0;
+  }
+}
